@@ -1,7 +1,7 @@
 fun main(args: Array<String>) {
-    println("Hello World!")
-
-    // Try adding program arguments via Run/Debug configuration.
-    // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
-    println("Program arguments: ${args.joinToString()}")
+    val amount = 1000
+    val commission = amount * 0.0075f
+    val minimumCommission = 35
+    val transferCommission = if (commission < minimumCommission) minimumCommission else commission
+    println("Transfer Commission: ${transferCommission.toInt()}" + " Руб.")
 }
